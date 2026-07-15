@@ -122,27 +122,38 @@ for p in auto_packs:
         "available": thumbnail is not None,
     })
 
-# 4. 큐레이션 인덱스에서 인기 카테고리 (썸네일 없으므로 링크만)
+# 4. 큐레이션 인덱스에서 모든 카드 빌드 (11,306 풀 표시)
 curation_cards = []
-# INDEX.json의 curation_items에서 섹션별 대표 + 자동수집에서 뺀 항목들만
-curations = INDEX["curation_items"][:1500]
-section_count = defaultdict(int)
-for it in curations:
+curations = INDEX.get("curation_items", [])
+for idx, it in enumerate(curations):
+    title = it["title"][:80]
     sec = it.get("section") or "Other"
-    if section_count[sec] >= 3:
-        continue
-    section_count[sec] += 1
-    id_ = re.sub(r'[^a-z0-9]+', '-', f"link-{it['title'][:50]}-{section_count[sec]}".lower()).strip('-')
+    sec_short = sec[:60]
+    # 카테고리 정제 (이전 build-site.py 키워드)
+    title_l = title.lower()
+    category = "Other"
+    for cat, kws in [
+        ("3D", ["3d","model","blender","obj","fbx","gltf","glb","vox"]),
+        ("2D", ["2d","sprite","pixel","tile","ui","font","icon"]),
+        ("Voxel", ["voxel","magicavoxel"]),
+        ("Audio", ["music","sound","sfx","audio","ogg","wav"]),
+        ("Game Engine", ["engine","godot","unity","unreal","framework"]),
+        ("AI", ["ai","neural","ml","gpt","diffusion"]),
+        ("Networking", ["network","multiplayer","server"]),
+    ]:
+        if any(k in title_l for k in kws):
+            category = cat
+            break
     curation_cards.append({
-        "id": id_[:80],
-        "title": it["title"][:80],
-        "category": sec[:60],
-        "category_raw": sec,
+        "id": re.sub(r'[^a-z0-9]+', '-', f"link-{title[:50]}-{idx}".lower()).strip('-')[:80],
+        "title": title,
+        "category": category,
+        "category_raw": sec_short,
         "license": "UNKNOWN",
-        "thumbnail": None,  # 외부 URL PNG 시도
-        "description": f"Source: {it['source']} — 외부 링크",
+        "thumbnail": None,
+        "description": f"{it.get('source','?')} — {sec_short}",
         "url": it["url"],
-        "tags": ["link"],
+        "tags": [it.get("source","link")] if it.get("source") else ["link"],
         "size_mb": 0,
         "available": False,
         "is_link_only": True,
@@ -163,7 +174,7 @@ stats = {
 out = {
     "stats": stats,
     "assets": cards,
-    "links": curation_cards[:300],  # 첫 300만 (사이트 부담 덜)
+    "links": curation_cards[:1500],  # 풀 큐레이션 11,306에서 상위 1,500 (사이트 부담 균형)
 }
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(out, indent=2, ensure_ascii=False))

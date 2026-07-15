@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+Thumbs.db
+
+# 임시 추출 (재생성 가능)
+**/.tmp/
+**/cache/
+extracted/*/raw/
+
+# 너무 큰 파일
+*.psd
+*.blend
+*.max
+*.ma
+
+# 빌드 산출물
+site/_site/
+site/.cache/
+
+# 인덱스 중간 산출물
+metadata/.cache/
+**/*.tmp.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/

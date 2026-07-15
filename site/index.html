@@ -52,6 +52,7 @@ footer a { color: #8aa2c0; text-decoration: none; }
 </header>
 
 <div class="container">
+  <div id="data-banner" style="display:none;background:rgba(74, 144, 226, 0.12);border:1px solid rgba(74, 144, 226, 0.4);border-radius:8px;padding:0.85rem 1rem;margin-bottom:1rem;color:#8bbdf3;font-size:0.88rem;"></div>
   <div class="stats">
     <div class="stat-card"><div class="num">11,306</div><div class="label">큐레이션 링크</div></div>
     <div class="stat-card"><div class="num">55</div><div class="label">Wesnoth 에셋 (CC-BY)</div></div>
@@ -159,7 +160,14 @@ function render() {
   document.getElementById('prev').disabled = page === 0;
   document.getElementById('next').disabled = end >= total;
   // 데이터가 끝나면 page=0으로 리셋
-  if (start >= total && page > 0) { page = 0; render(); }
+  if (start >= total && page > 0) { page = 0;   // Data size banner — show truncated notice when card count < 500
+  const banner = document.getElementById('data-banner');
+  if (banner && allAssets.length < 500) {
+    banner.style.display = 'block';
+    banner.innerHTML = '⚠️ 이 카탈로그는 현재 <strong>' + allAssets.length.toLocaleString() + '개 카드</strong>만 표시 중입니다 (GitHub Actions submodule 동기화 이슈). 전체 풀 <strong>11,306개</strong>는 Workflow 수정 후 표시됩니다. (<a href="https://github.com/sigco3111/game-assets-pool/actions/workflows/pages.yml">workflow 보기</a>)';
+  }
+
+  render(); }
 }
 
 function prevPage() { if (page > 0) { page--; render(); } }

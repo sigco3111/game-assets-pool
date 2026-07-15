@@ -1,0 +1,13 @@
+source_game: wesnoth
+source_repo: https://github.com/wesnoth/wesnoth
+copyright: Copyright © 2003-2026 The Battle for Wesnoth contributors
+license_code: GPL-2.0-only
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0 (에셋만 추출, 코드 GPL 분리)
+extracted_at: '2026-07-15T05:12:56.100585Z'
+filename: frantic-old.ogg
+rel_path: music/core/music/frantic-old.ogg
+size_bytes: 1029088
+category: background-music
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

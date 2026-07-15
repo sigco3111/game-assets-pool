@@ -1,0 +1,13 @@
+source_game: wesnoth
+source_repo: https://github.com/wesnoth/wesnoth
+copyright: Copyright © 2003-2026 The Battle for Wesnoth contributors
+license_code: GPL-2.0-only
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0 (에셋만 추출, 코드 GPL 분리)
+extracted_at: '2026-07-15T05:12:56.493952Z'
+filename: orc-die-3.ogg
+rel_path: sounds/core_sounds/orc-die-3.ogg
+size_bytes: 11269
+category: sfx
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

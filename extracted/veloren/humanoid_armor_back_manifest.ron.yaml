@@ -1,0 +1,13 @@
+source_game: veloren
+source_repo: https://gitlab.com/veloren/veloren
+copyright: Copyright © Veloren contributors
+license_code: MPL-2.0
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0
+extracted_at: '2026-07-15T05:44:45.057976Z'
+filename: humanoid_armor_back_manifest.ron
+rel_path: voxels/humanoid_armor_back_manifest.ron
+size_bytes: 7125
+category: voxel-model
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

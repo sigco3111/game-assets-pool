@@ -1,0 +1,13 @@
+source_game: wesnoth
+source_repo: https://github.com/wesnoth/wesnoth
+copyright: Copyright © 2003-2026 The Battle for Wesnoth contributors
+license_code: GPL-2.0-only
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0 (에셋만 추출, 코드 GPL 분리)
+extracted_at: '2026-07-15T05:42:56.365283Z'
+filename: noble-commander-defend.png
+rel_path: units/campaigns/The_Rise_Of_Wesnoth/noble-commander-defend.png
+size_bytes: 1821
+category: unit-sprite
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

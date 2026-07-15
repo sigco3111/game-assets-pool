@@ -1,0 +1,13 @@
+source_game: freeciv
+source_repo: https://github.com/freeciv/freeciv
+copyright: Copyright © Freeciv contributors
+license_code: GPL-2.0-or-later
+license_assets: GPL-2.0-only
+extracted_license: GPL-2.0 (그림도 GPL)
+extracted_at: '2026-07-15T05:44:39.216482Z'
+filename: colombia-large.png
+rel_path: flags/colombia-large.png
+size_bytes: 397
+category: country-flag
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

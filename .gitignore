@@ -61,3 +61,7 @@ node_modules/
 .cache/
 
 extracted/**/Users/
+
+# Vercel 카탈로그 (미사용, GitHub Pages로 통합)
+vercel-catalog/
+vercel.json

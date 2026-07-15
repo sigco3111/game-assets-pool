@@ -4,7 +4,7 @@
 
 <div align="center">
 
-🎯 **[라이브 카탈로그 · Vercel](https://game-assets-pool-catalog.vercel.app)** · **[GitHub Pages](https://sigco3111.github.io/game-assets-pool/)**
+🎯 **[라이브 카탈로그 · GitHub Pages](https://sigco3111.github.io/game-assets-pool/)**
 
 </div>
 
@@ -13,18 +13,19 @@
 ![Stars](https://img.shields.io/github/stars/sigco3111/game-assets-pool?style=for-the-badge)
 ![License](https://img.shields.io/github/license/sigco3111/game-assets-pool?style=for-the-badge)
 ![CC0](https://img.shields.io/badge/code%20license-CC0--1.0-blue?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/vercel-deployed-black?style=for-the-badge&logo=vercel)
+![Pages](https://img.shields.io/badge/hosting-GitHub%20Pages-blue?style=for-the-badge&logo=github)
 
 </div>
 
 ---
 
-## 🌐 라이브 사이트 2종
+## 🌐 라이브 사이트
 
-| 서비스 | URL | 특징 |
-|---|---|---|
-| **Vercel 카탈로그** | [game-assets-pool-catalog.vercel.app](https://game-assets-pool-catalog.vercel.app) | ✅ 카드형 + **14개 썸네일** + 검색·필터 |
-| **GitHub Pages 카탈로그** | [sigco3111.github.io/game-assets-pool](https://sigco3111.github.io/game-assets-pool/) | 풀 카탈로그, 9,000+ 카드, 자동 Pages 배포 |
+| | |
+|---|---|
+| **GitHub Pages 카탈로그** | [sigco3111.github.io/game-assets-pool](https://sigco3111.github.io/game-assets-pool/) |
+
+GitHub Actions의 `pages.yml` 워크플로우가 main 브랜치 push 시 사이트를 자동 빌드 + 배포합니다. **새 CC0 팩을 추가하거나 sidecar를 갱신해도 push만 하면 자동으로 사이트가 갱신됩니다.**
 
 ---
 
@@ -68,10 +69,9 @@ game-assets-pool/
 │   ├── INDEX.json         11,306 링크 + 4,528 sidecar 통합 인덱스
 │   └── INDEX.md           사람이 읽는 인덱스
 ├── tools/                 자동화 도구 8종 (인덱스빌더, 사이트생성, 추출, 엔진 import)
-├── site/                  GitHub Pages 카탈로그 (단일 HTML 295KB)
-├── vercel-catalog/        Vercel 카탈로그 (카드형 + 14 썸네일, 292KB)
+├── site/                  GitHub Pages 카탈로그 (단일 HTML 295KB, Actions 자동 빌드+배포)
 ├── docs/CREDIT-TEMPLATES.md  라이선스 표기 표준
-└── .github/workflows/pages.yml  Pages 자동 배포
+└── .github/workflows/pages.yml  Pages 자동 배포 (push trigger)
 ```
 
 ---
@@ -104,7 +104,7 @@ game-assets-pool/
 | 추출 게임 소스 | **5종** (Wesnoth, FreeCiv, Warzone 2100, Veloren, OpenTTD) |
 | 에셋 sidecar YAML 메타 | **4,528개** |
 | 자동화 도구 | **8종** |
-| 라이브 카탈로그 사이트 | **2개** (Vercel + GitHub Pages) |
+| 라이브 카탈로그 사이트 | **1개** (GitHub Pages) |
 
 **캐시 디스크 사용** (gitignored, 재생성 가능):
 - `free/*/` 실제 에셋: ~1GB (KayKit 7종 + Nieobie + 나머지)
@@ -156,15 +156,11 @@ python3 tools/build-index.py            # metadata/INDEX.{json,md}
 # 2. GitHub Pages 카탈로그 사이트
 python3 tools/build-site.py             # site/index.html
 
-# 3. Vercel 카탈로그 (카드형 + 썸네일)
-python3 vercel-catalog/scripts/copy_thumbnails.sh   # thumbnails 동기화
-python3 vercel-catalog/scripts/build_cards.py        # cards.json 빌드
-
-# 4. 라이선스 자동 표기
+# 3. 라이선스 자동 표기
 python3 tools/build-credits.py          # CREDITS.md (게임 배포 동봉용)
 ```
 
-GitHub Actions (`pages.yml`)가 push 시 자동으로 GitHub Pages 사이트를 갱신합니다.
+GitHub Actions의 `pages.yml`이 main 브랜치 push 시 자동으로 사이트를 빌드 + Pages에 배포합니다.
 
 ---
 
@@ -189,7 +185,7 @@ GitHub Actions (`pages.yml`)가 push 시 자동으로 GitHub Pages 사이트를 
 <div align="center">
 
 <sub>
-생성/갱신 도구: <code>tools/build-index.py</code> · <code>tools/build-site.py</code> · <code>vercel-catalog/scripts/build_cards.py</code><br>
+생성/갱신 도구: <code>tools/build-index.py</code> · <code>tools/build-site.py</code> · GitHub Actions 자동 페이지 빌드<br>
 <sub>
 </sub></sub>
 

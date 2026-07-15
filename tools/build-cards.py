@@ -120,15 +120,49 @@ for p in auto_packs:
         "tags": tags,
         "size_mb": p["size_estimate_mb"],
         "available": thumbnail is not None,
+        "is_external_link": False,
+        "is_link_only": False,
     })
 
 # 4. 큐레이션 인덱스에서 모든 카드 빌드 (11,306 풀 표시)
 curation_cards = []
 curations = INDEX.get("curation_items", [])
+
+# URL → GitHub repo ZIP 직접 다운로드 URL로 변환
+def convert_to_zip_url(url: str) -> tuple:
+    """
+    Returns: (converted_url, is_github_zip)
+    - GitHub repo URL → codeload ZIP
+    - shields.io/img.shields.io 등 노이즈 → ('#', False) 같은 (skip)
+    - 그 외 외부 링크 → 그대로 (다운로드 표시 아님)
+    """
+    import re as _re
+    if not url:
+        return ("#", False)
+    # 노이즈 필터: shields.io 이미지, .svg, 아티클 이미지
+    if 'shields.io' in url or url.endswith('.svg'):
+        return ("#skip#", False)
+    # /issues/, /blob/, /raw/, /tree/ 내부 링크도 노이즈 가능성 큼
+    if _re.search(r'/(issues|blob|raw|actions)/', url):
+        return ("#skip#", False)
+    # github.com/{owner}/{repo} root 또는 tree/main
+    m = _re.match(r'^https?://github\.com/([^/]+)/([^/]+?)(?:\.git)?/?$', url)
+    if m:
+        owner, repo = m.group(1), m.group(2)
+        return (f"https://codeload.github.com/{owner}/{repo}/zip/refs/heads/main", True)
+    m = _re.match(r'^https?://github\.com/([^/]+)/([^/]+)/tree/(main|master)/?$', url)
+    if m:
+        return (f"https://codeload.github.com/{m.group(1)}/{m.group(2)}/zip/refs/heads/{m.group(3)}", True)
+    return (url, False)
+
 for idx, it in enumerate(curations):
     title = it["title"][:80]
     sec = it.get("section") or "Other"
-    sec_short = sec[:60]
+    sec_short = sec[:60] + " (외부 링크)" if it.get("is_external") else sec[:60]
+    zip_url, is_github_zip = convert_to_zip_url(it["url"])
+    # 노이즈 (shields/issues/blob/raw) 제외
+    if zip_url == "#skip#":
+        continue
     # 카테고리 정제 (이전 build-site.py 키워드)
     title_l = title.lower()
     category = "Other"
@@ -152,10 +186,11 @@ for idx, it in enumerate(curations):
         "license": "UNKNOWN",
         "thumbnail": None,
         "description": f"{it.get('source','?')} — {sec_short}",
-        "url": it["url"],
+        "url": zip_url,
         "tags": [it.get("source","link")] if it.get("source") else ["link"],
         "size_mb": 0,
-        "available": False,
+        "available": is_github_zip,  # ZIP 가능 = True (다운로드 가능)
+        "is_external_link": not is_github_zip,
         "is_link_only": True,
     })
 

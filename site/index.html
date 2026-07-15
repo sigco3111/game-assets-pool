@@ -53,8 +53,9 @@ header .stat-label { font-size: 0.8rem; color: var(--text-dim); text-transform: 
 .badge-lic.unknown { background: rgba(244, 132, 132, 0.15); color: #f48484; border-color: rgba(244, 132, 132, 0.4); }
 .badge-tag { background: rgba(74, 144, 226, 0.18); color: #8bbdf3; border: 1px solid rgba(74, 144, 226, 0.3); }
 .badge-size { background: rgba(255, 255, 255, 0.04); color: var(--text-dim); border: 1px solid var(--border); }
-.card-link { margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; color: var(--accent); text-decoration: none; font-size: 0.78rem; font-weight: 600; }
-.card-link:hover { text-decoration: underline; }
+.card-link { margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; color: var(--accent); text-decoration: none; font-size: 0.78rem; font-weight: 600; padding: 0.35rem 0.6rem; border: 1px solid var(--accent); border-radius: 4px; }
+.card-link:hover { text-decoration: underline; background: rgba(74,144,226,0.1); }
+.card-link.ext { color: var(--text-dim); border-color: var(--border); }
 
 .empty-state { grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-dim); }
 .pagination { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
@@ -262,7 +263,9 @@ function render() {
       const thumb = a.thumbnail
         ? `<div class="card-thumb"><img src="${base}${escapeHtml(a.thumbnail)}" loading="lazy" alt="${escapeHtml(a.title)}"></div>`
         : `<div class="card-thumb no-thumb" data-icon="${categoryIcon(a.category)}"></div>`;
-      const link = a.url ? `<a class="card-link" href="${escapeHtml(a.url)}" target="_blank">소스 보기 ↗</a>` : '';
+      const linkLabel = a.is_external_link ? '외부 링크 ↗' : '다운로드 ZIP 📦';
+      const linkClass = a.is_external_link ? 'card-link ext' : 'card-link';
+      const link = a.url ? `<a class="${linkClass}" href="${escapeHtml(a.url)}" target="_blank" rel="noopener">${linkLabel}</a>` : '';
       const titleLink = a.url
         ? `<a class="card-title" href="${escapeHtml(a.url)}" target="_blank">${escapeHtml(a.title)}</a>`
         : `<div class="card-title">${escapeHtml(a.title)}</div>`;

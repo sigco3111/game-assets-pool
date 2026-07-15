@@ -7,6 +7,28 @@ Thumbs.db
 **/cache/
 extracted/*/raw/
 
+# 자동 다운로드 자산의 대용량 원본 — SOURCE.md만 트래킹
+# bash tools/fetch-cc0-assets.sh 로 언제든 다시 받을 수 있음
+free/**/*.png
+free/**/*.jpg
+free/**/*.jpeg
+free/**/*.webp
+free/**/*.svg
+free/**/*.gif
+free/**/*.fbx
+free/**/*.obj
+free/**/*.gltf
+free/**/*.glb
+free/**/*.blend
+free/**/*.wav
+free/**/*.ogg
+free/**/*.mp3
+free/**/*.opus
+free/**/*.unity
+free/**/*.uasset
+free/**/*.zip
+free/**/*.tar.gz
+
 # 너무 큰 파일
 *.psd
 *.blend
@@ -28,3 +50,5 @@ __pycache__/
 
 # Node
 node_modules/
+
+.cache/

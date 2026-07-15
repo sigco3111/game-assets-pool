@@ -50,7 +50,26 @@ curations = [
     ("VoxelAssets", CURATED / "VoxelAssets" / "README.md"),
     ("spritecook-free-game-assets", CURATED / "spritecook-free-game-assets" / "README.md"),
 ]
-all_cur = []
+
+# -----------------------------------------------------------------
+# 0-prep. auto-collected packs (free/ 디렉터리에서 fetch된 팩)
+# -----------------------------------------------------------------
+AUTO_PACKS_JSONL = REPO / "free" / "_curation_cc0_ccby_2026-07-15.jsonl"
+auto_packs_meta = []
+if AUTO_PACKS_JSONL.exists():
+    try:
+        for line in AUTO_PACKS_JSONL.read_text().strip().split("\n"):
+            if line.strip():
+                auto_packs_meta.append({
+                    "title": json.loads(line)["name"],
+                    "url": json.loads(line)["url"],
+                    "section": f"Auto: {json.loads(line)['category']}",
+                    "source": f"auto-cc0",
+                })
+    except Exception:
+        pass
+print(f"  auto-collected packs: {len(auto_packs_meta)} (free/ 디렉터리)")
+all_cur = list(auto_packs_meta)  # 초기화
 for name, path in curations:
     items = parse_curation(path, name)
     print(f"  {name}: {len(items)} links")

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T05:13:47.159397Z",
-  "curation_total": 6158,
+  "generated_at": "2026-07-15T05:21:10.622387Z",
+  "curation_total": 6178,
   "wesnoth_assets_total": 1088,
   "wesnoth_by_category": {
     "background-music": 97,
@@ -8,6 +8,22 @@
     "unit-sprite": 407
   },
   "by_section": {
+    "Auto: UI/Icons": 1,
+    "Auto: 3D/Characters": 2,
+    "Auto: 3D/Props": 3,
+    "Auto: 3D/Tilesets": 1,
+    "Auto: 3D/Environments": 1,
+    "Auto: 2D/Prompt-pack": 1,
+    "Auto: 3D/Catalog": 2,
+    "Auto: Catalog/Meta-list": 1,
+    "Auto: 2D+3D/Multi": 1,
+    "Auto: 3D/Objects": 1,
+    "Auto: 2D/Pixel-icons": 1,
+    "Auto: 3D/PBR-textures": 1,
+    "Auto: Voxel": 1,
+    "Auto: Audio/Samples": 1,
+    "Auto: 2D/Pixel-sprites": 1,
+    "Auto: 2D/SVG-icons": 1,
     "# [3D Resources: Software, Assets, Tutorials & Tools for 3D Artists](https://3d.devanshutak.xyz)": 9,
     "Model Libraries: Free & General": 33,
     "Model Libraries: Specialized": 21,
@@ -308,6 +324,126 @@
     }
   ],
   "curation_items": [
+    {
+      "title": "Nieobie game-icon-pack",
+      "url": "https://codeload.github.com/Nieobie/game-icon-pack/zip/refs/heads/main",
+      "section": "Auto: UI/Icons",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Character Pack: Adventurers 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Characters",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit City Builder Bits 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Props",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Prototype Bits 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Prototype-Bits-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Props",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Medieval Hexagon Pack 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Tilesets",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Dungeon Remastered 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Environments",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Character Pack: Skeletons 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Characters",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "KayKit Restaurant Bits 1.0",
+      "url": "https://codeload.github.com/KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0/zip/refs/heads/main",
+      "section": "Auto: 3D/Props",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "mr-breakfast free prompts pack",
+      "url": "https://codeload.github.com/mr-breakfast/mrbreakfasts_free_prompts/zip/refs/heads/main",
+      "section": "Auto: 2D/Prompt-pack",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "devanshutak25 3d-resources reference hub",
+      "url": "https://codeload.github.com/devanshutak25/3d-resources/zip/refs/heads/main",
+      "section": "Auto: 3D/Catalog",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "felladrin game-development-resources-list",
+      "url": "https://codeload.github.com/felladrin/game-development-resources-list/zip/refs/heads/master",
+      "section": "Auto: Catalog/Meta-list",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "Toxsam open-source-3D-assets registry",
+      "url": "https://codeload.github.com/Toxsam/open-source-3D-assets/zip/refs/heads/main",
+      "section": "Auto: 3D/Catalog",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "sparklinlabs superpowers-asset-packs",
+      "url": "https://codeload.github.com/sparklinlabs/superpowers-asset-packs/zip/refs/heads/master",
+      "section": "Auto: 2D+3D/Multi",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "PHI-LABS phi-objects",
+      "url": "https://codeload.github.com/PHI-LABS-INC/phi-objects/zip/refs/heads/main",
+      "section": "Auto: 3D/Objects",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "tstamborski pixelart-icons",
+      "url": "https://codeload.github.com/tstamborski/pixelart-icons/zip/refs/heads/main",
+      "section": "Auto: 2D/Pixel-icons",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "Kimbatt cc0-textures",
+      "url": "https://codeload.github.com/Kimbatt/cc0-textures/zip/refs/heads/master",
+      "section": "Auto: 3D/PBR-textures",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "Phyronnaz VoxelAssets",
+      "url": "https://codeload.github.com/Phyronnaz/VoxelAssets/zip/refs/heads/master",
+      "section": "Auto: Voxel",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "sgossner VCSL (Versilian Community Sample Library)",
+      "url": "https://codeload.github.com/sgossner/VCSL/zip/refs/heads/master",
+      "section": "Auto: Audio/Samples",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "doficia project-cordon-sprites",
+      "url": "https://codeload.github.com/doficia/project-cordon-sprites/zip/refs/heads/master",
+      "section": "Auto: 2D/Pixel-sprites",
+      "source": "auto-cc0"
+    },
+    {
+      "title": "gmgeo osmic (SVG Map Icons)",
+      "url": "https://codeload.github.com/gmgeo/osmic/zip/refs/heads/master",
+      "section": "Auto: 2D/SVG-icons",
+      "source": "auto-cc0"
+    },
     {
       "title": "3D Resources: Software, Assets, Tutorials & Tools for 3D Artists",
       "url": "https://3d.devanshutak.xyz",
@@ -36186,126 +36322,6 @@
       "title": "unity-procedural-tree",
       "url": "https://github.com/mattatz/unity-procedural-tree",
       "section": "Procedural Generation Systems",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "unity-procedural-flower",
-      "url": "https://github.com/mattatz/unity-procedural-flower",
-      "section": "Procedural Generation Systems",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "ProceduralToolkit",
-      "url": "https://github.com/Syomus/ProceduralToolkit",
-      "section": "Procedural Generation Systems",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "wavefunctioncollapse",
-      "url": "https://github.com/marian42/wavefunctioncollapse/",
-      "section": "Procedural Generation Systems",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "ProceduralLevelGenerator-Unity",
-      "url": "https://github.com/OndrejNepozitek/ProceduralLevelGenerator-Unity",
-      "section": "Procedural Generation Systems",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "QuickPool",
-      "url": "https://github.com/densylkin/QuickPool",
-      "section": "Pooling System",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "RecyclerKit",
-      "url": "https://github.com/prime31/RecyclerKit",
-      "section": "Pooling System",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "ObjectPool",
-      "url": "https://github.com/UnityPatterns/ObjectPool",
-      "section": "Pooling System",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "unity-object-pool",
-      "url": "https://github.com/thefuntastic/unity-object-pool",
-      "section": "Pooling System",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "protobuf-net",
-      "url": "https://github.com/mgravell/protobuf-net",
-      "section": "Profobuf",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "protobuf-unity",
-      "url": "https://github.com/5argon/protobuf-unity",
-      "section": "Profobuf",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "unity-atoms",
-      "url": "https://github.com/AdamRamberg/unity-atoms",
-      "section": "Scriptable Object",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "Scriptable-Framework",
-      "url": "https://github.com/pablothedolphin/Scriptable-Framework",
-      "section": "Scriptable Object",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "yaSingleton",
-      "url": "https://github.com/jedybg/yaSingleton",
-      "section": "Scriptable Object",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "SOFlow",
-      "url": "https://github.com/BLUDRAG/SOFlow",
-      "section": "Scriptable Object",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "ScriptableObject-Architecture",
-      "url": "https://github.com/DanielEverland/ScriptableObject-Architecture",
-      "section": "Scriptable Object",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "YarnSpinner",
-      "url": "https://github.com/YarnSpinnerTool/YarnSpinner",
-      "section": "Scriptings",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "UnityNativeScripting",
-      "url": "https://github.com/jacksondunstan/UnityNativeScripting",
-      "section": "Scriptings",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "unity-python",
-      "url": "https://github.com/exodrifter/unity-python",
-      "section": "Scriptings",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "UniScript",
-      "url": "https://github.com/pjc0247/UniScript",
-      "section": "Scriptings",
-      "source": "awesome-opensource-unity"
-    },
-    {
-      "title": "SlowSharp",
-      "url": "https://github.com/pjc0247/SlowSharp",
-      "section": "Scriptings",
       "source": "awesome-opensource-unity"
     }
   ]

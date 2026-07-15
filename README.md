@@ -64,8 +64,17 @@ game-assets-pool/
 ## 📊 현재 풀 규모
 
 - 큐레이션 5종 → 6,158개 유니크 링크
-- Wesnoth 22,827개 자산 (sparse-checkout)
+- **자동 수집 CC0 팩 20종** (KayKit 8종, Nieobie, Pixelicons, VoxelAssets 등)
+- **Wesnoth 22,827개 자산 (sparse-checkout) → 10,327개 symlink + 1,088 sidecar YAML**
 - 추출·정리된 실제 에셋은 `metadata/INDEX.md` 참조
+
+## ⚡ Quick fetch
+
+```bash
+# 검증된 CC0/CC-BY 무료 팩 20개 자동 다운로드 + 카테고리별 분류
+bash tools/fetch-cc0-assets.sh
+# 캐시: .cache/downloads/*.zip (~1.2GB)
+```
 
 ## 🔄 인덱스 재생성
 

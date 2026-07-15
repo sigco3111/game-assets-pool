@@ -46,3 +46,9 @@
 [submodule "curated/awesome-game-engine-dev"]
 	path = curated/awesome-game-engine-dev
 	url = https://github.com/stevinz/awesome-game-engine-dev.git
+[submodule "curated/3d-resources"]
+	path = curated/3d-resources
+	url = https://github.com/devanshutak25/3d-resources.git
+[submodule "curated/awesome-opensource-unity"]
+	path = curated/awesome-opensource-unity
+	url = https://github.com/StefanoCecere/awesome-opensource-unity.git

@@ -23,6 +23,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+          fetch-depth: 1
+          # Ensure submodule directories are populated with files
+          lfs: false
+
+      - name: Init and update all submodules
+        run: |
+          git submodule update --init --depth 1 --recursive
+
+      - name: Verify submodules populated
+        run: |
+          echo "=== submodule READMEs ==="
+          for d in curated/*/; do
+            if [ -d "$d" ] && [ -f "$d/README.md" ]; then
+              echo "  $(basename $d): $(wc -l < $d/README.md) lines"
+            else
+              echo "  $(basename $d): EMPTY"
+            fi
+          done
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,6 +53,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Regenerate site
+        # build-index.py reads curated/, extracted/, free/ inside the repo
         run: |
           python3 tools/build-index.py
           python3 tools/build-site.py

@@ -115,6 +115,13 @@ footer a:hover { color: var(--accent); }
 <script>
 const PAGE_SIZE = 24;
 let page = 0;
+
+// base = '/game-assets-pool' on GitHub Pages subpath, '' on root domains
+function deriveBase() {
+  return window.location.pathname.startsWith('/game-assets-pool/') ? '/game-assets-pool' : '';
+}
+const base = deriveBase();
+
 let allAssets = [];
 let allLinks = [];
 
@@ -161,10 +168,24 @@ function licClass(lic) {
 }
 
 async function init() {
-  const r = await fetch('/data/cards.json');
-  const data = await r.json();
+  const cardsUrl = base + '/data/cards.json';
+  const r = await fetch(cardsUrl);
+  console.log('[catalog] fetch', cardsUrl, 'status:', r.status, 'content-type:', r.headers.get('content-type'));
+  if (!r.ok) {
+    document.getElementById('grid').innerHTML = '<div class="empty-state">⚠️ cards.json fetch 실패 (' + r.status + '). 브라우저 콘솔 확인</div>';
+    return;
+  }
+  let data;
+  try {
+    data = await r.json();
+  } catch(e) {
+    document.getElementById('grid').innerHTML = '<div class="empty-state">⚠️ cards.json JSON 파싱 실패. 브라우저 콘솔 확인</div>';
+    console.error('[catalog] json parse error:', e, await r.text().catch(()=>'<no body>'));
+    return;
+  }
   allAssets = data.assets || [];
   allLinks = data.links || [];
+  console.log('[catalog] loaded', allAssets.length, 'assets,', allLinks.length, 'links');
 
   // header stats
   document.getElementById('stats-assets').textContent = allAssets.length.toLocaleString();
@@ -236,7 +257,7 @@ function render() {
       const tagsHtml = (a.tags || []).map(t => `<span class="badge badge-tag">${escapeHtml(t)}</span>`).join('');
       const size = a.size_mb ? `<span class="badge badge-size">${a.size_mb} MB</span>` : '';
       const thumb = a.thumbnail
-        ? `<div class="card-thumb"><img src="${escapeHtml(a.thumbnail)}" loading="lazy" alt="${escapeHtml(a.title)}"></div>`
+        ? `<div class="card-thumb"><img src="${base}${escapeHtml(a.thumbnail)}" loading="lazy" alt="${escapeHtml(a.title)}"></div>`
         : `<div class="card-thumb no-thumb" data-icon="${categoryIcon(a.category)}"></div>`;
       const link = a.url ? `<a class="card-link" href="${escapeHtml(a.url)}" target="_blank">소스 보기 ↗</a>` : '';
       const titleLink = a.url

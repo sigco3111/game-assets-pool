@@ -1,0 +1,9 @@
+[submodule "curated/VoxelAssets-mirror"]
+	path = curated/VoxelAssets-mirror
+	url = https://github.com/Phyronnaz/VoxelAssets.git
+[submodule "curated/base-meshes"]
+	path = curated/base-meshes
+	url = https://github.com/M3-org/base-meshes.git
+[submodule "curated/spritecook-mirror"]
+	path = curated/spritecook-mirror
+	url = https://github.com/SpriteCook/spritecook-free-game-assets.git

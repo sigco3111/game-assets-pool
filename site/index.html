@@ -185,7 +185,7 @@ async function init() {
   }
   allAssets = data.assets || [];
   allLinks = data.links || [];
-  console.log('[catalog] loaded', allAssets.length, 'assets,', allLinks.length, 'links');
+  console.log('[catalog] loaded', allAssets.length, 'assets,', allLinks.length, 'links; total=' + (allAssets.length + allLinks.length));
 
   // header stats
   document.getElementById('stats-assets').textContent = allAssets.length.toLocaleString();
@@ -228,12 +228,15 @@ function filtered() {
   const lic = document.getElementById('lic').value;
   const view = document.getElementById('view').value;
 
-  return allAssets.filter(a => {
+  // assets + links 통합한 단일 list (=all visible cards)
+  const allCards = allAssets.concat(allLinks);
+
+  return allCards.filter(a => {
     if (cat && a.category !== cat) return false;
     if (lic && a.license !== lic) return false;
     if (view === 'thumb' && !a.thumbnail) return false;
     if (q) {
-      const hay = (a.title + ' ' + a.description + ' ' + (a.tags || []).join(' ')).toLowerCase();
+      const hay = (a.title + ' ' + (a.description||'') + ' ' + (a.tags || []).join(' ')).toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;

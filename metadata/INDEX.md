@@ -1,7 +1,7 @@
 # Game Assets Pool — Master Index
 
-**generated**: 2026-07-15T06:53:47.966622Z
-**stats**: 11,306 큐레이션 링크 + 55 Wesnoth 에셋
+**generated**: 2026-07-15T07:02:01.932323Z
+**stats**: 11,306 큐레이션 링크 + 55 Wesnoth 에셋 + 20 자동수집 팩
 
 
 ## 📊 풀 스냅샷
@@ -9,8 +9,9 @@
 | 카테고리 | 항목 수 |
 |---|---:|
 | 큐레이션 유니크 링크 | 11,306 |
+| 자동수집 팩 | 20 |
 | Wesnoth 에셋 (sidecar) | 55 |
-| **합계** | **11,361** |
+| **합계** | **11,381** |
 
 ## 🎮 Wesnoth 카테고리별 분포
 
@@ -44,14 +45,6 @@
 | Video Editing: Courses | 97 |
 | Game Jams | 92 |
 
-## 🔬 게임 소스별 추출
-
-| 게임 | 라이선스 | 추출 단위 | sidecar |
-|---|---|---:|---:|
-| wesnoth | CC-BY (에셋) | units/portraits/music/sounds | 55 |
-| godot-open-rts | MIT | 메타데이터 only | 0 |
-| veloren | CC-BY | 미추출 (sparse 미완) | - |
-
 ## 🏷 라이선스 표기 정책
 
 
@@ -66,4 +59,4 @@
 자세한 표기 템플릿: [`docs/CREDIT-TEMPLATES.md`](../docs/CREDIT-TEMPLATES.md)
 
 
-🌐 카탈로그 사이트: [`site/index.html`](../site/index.html)
+🌐 카탈로그 사이트: [`site/INDEX.md`](../site/index.html)

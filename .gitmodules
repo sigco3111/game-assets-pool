@@ -7,3 +7,42 @@
 [submodule "curated/spritecook-mirror"]
 	path = curated/spritecook-mirror
 	url = https://github.com/SpriteCook/spritecook-free-game-assets.git
+[submodule "curated/bevy-assets"]
+	path = curated/bevy-assets
+	url = https://github.com/bevyengine/bevy-assets.git
+[submodule "curated/magictools"]
+	path = curated/magictools
+	url = https://github.com/ellisonleao/magictools.git
+[submodule "curated/GameDev-Resources"]
+	path = curated/GameDev-Resources
+	url = https://github.com/Kavex/GameDev-Resources.git
+[submodule "curated/awesome-unity"]
+	path = curated/awesome-unity
+	url = https://github.com/RyanNielson/awesome-unity.git
+[submodule "curated/awesome-love2d"]
+	path = curated/awesome-love2d
+	url = https://github.com/love2d-community/awesome-love2d.git
+[submodule "curated/awesome-PICO-8"]
+	path = curated/awesome-PICO-8
+	url = https://github.com/pico-8/awesome-PICO-8.git
+[submodule "curated/awesome-gamedev"]
+	path = curated/awesome-gamedev
+	url = https://github.com/Calinou/awesome-gamedev.git
+[submodule "curated/awesome-learn-gamedev"]
+	path = curated/awesome-learn-gamedev
+	url = https://github.com/dawdle-deer/awesome-learn-gamedev.git
+[submodule "curated/awesome-playdate"]
+	path = curated/awesome-playdate
+	url = https://github.com/sayhiben/awesome-playdate.git
+[submodule "curated/spritecook-free-game-assets"]
+	path = curated/spritecook-free-game-assets
+	url = https://github.com/SpriteCook/spritecook-free-game-assets.git
+[submodule "curated/anything_about_game"]
+	path = curated/anything_about_game
+	url = https://github.com/killop/anything_about_game.git
+[submodule "curated/VoxelAssets"]
+	path = curated/VoxelAssets
+	url = https://github.com/Phyronnaz/VoxelAssets.git
+[submodule "curated/awesome-game-engine-dev"]
+	path = curated/awesome-game-engine-dev
+	url = https://github.com/stevinz/awesome-game-engine-dev.git

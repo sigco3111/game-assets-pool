@@ -1,0 +1,13 @@
+source_game: veloren
+source_repo: https://gitlab.com/veloren/veloren
+copyright: Copyright © Veloren contributors
+license_code: MPL-2.0
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0
+extracted_at: '2026-07-15T05:33:25.411575Z'
+filename: humanoid_armor_chest_manifest.ron
+rel_path: voxels/humanoid_armor_chest_manifest.ron
+size_bytes: 11019
+category: voxel-model
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

@@ -49,7 +49,17 @@ curations = [
     ("awesome-opensource-unity", CURATED / "awesome-opensource-unity" / "README.md"),
     ("VoxelAssets", CURATED / "VoxelAssets" / "README.md"),
     ("spritecook-free-game-assets", CURATED / "spritecook-free-game-assets" / "README.md"),
-]
+    # ─── 새로 추가된 9종 ──────────────────────────────────────
+    ("magictools", CURATED / "magictools" / "README.md"),
+    ("GameDev-Resources", CURATED / "GameDev-Resources" / "README.md"),
+    ("awesome-unity", CURATED / "awesome-unity" / "README.md"),
+    ("awesome-love2d", CURATED / "awesome-love2d" / "README.md"),
+    ("awesome-PICO-8", CURATED / "awesome-PICO-8" / "README.md"),
+    ("awesome-gamedev", CURATED / "awesome-gamedev" / "README.md"),
+    ("awesome-learn-gamedev", CURATED / "awesome-learn-gamedev" / "README.md"),
+    ("anything_about_game", CURATED / "anything_about_game" / "README.md"),
+    ("awesome-playdate", CURATED / "awesome-playdate" / "README.md"),
+]  # 총 14 종
 
 # -----------------------------------------------------------------
 # 0-prep. auto-collected packs (free/ 디렉터리에서 fetch된 팩)

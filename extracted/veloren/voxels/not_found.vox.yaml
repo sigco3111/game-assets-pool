@@ -1,0 +1,13 @@
+source_game: veloren
+source_repo: https://gitlab.com/veloren/veloren
+copyright: Copyright © Veloren contributors
+license_code: MPL-2.0
+license_assets: CC-BY-4.0
+extracted_license: CC-BY-4.0
+extracted_at: '2026-07-15T05:33:25.389204Z'
+filename: not_found.vox
+rel_path: voxels/not_found.vox
+size_bytes: 129
+category: voxel-model
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

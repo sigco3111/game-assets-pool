@@ -1,0 +1,13 @@
+source_game: warzone
+source_repo: https://github.com/Warzone2100/warzone2100
+copyright: Copyright © Warzone 2100 contributors / Pumpkin Studios original
+license_code: GPL-2.0-only
+license_assets: CC-BY-SA-2.0 (제한적 상업적 재사용 가능)
+extracted_license: CC-BY-SA-2.0 (에셋만)
+extracted_at: '2026-07-15T05:32:52.702593Z'
+filename: image_question_circle.png
+rel_path: interface/frontend/Users/mac/work/game-assets/sources/warzone/data/base/images/frontend/image_question_circle.png
+size_bytes: 1674
+category: ui-element
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

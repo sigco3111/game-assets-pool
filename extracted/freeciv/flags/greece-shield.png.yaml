@@ -1,0 +1,13 @@
+source_game: freeciv
+source_repo: https://github.com/freeciv/freeciv
+copyright: Copyright © Freeciv contributors
+license_code: GPL-2.0-or-later
+license_assets: GPL-2.0-only
+extracted_license: GPL-2.0 (그림도 GPL)
+extracted_at: '2026-07-15T05:32:54.883301Z'
+filename: greece-shield.png
+rel_path: flags/greece-shield.png
+size_bytes: 433
+category: country-flag
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

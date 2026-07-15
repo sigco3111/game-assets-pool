@@ -1,0 +1,13 @@
+source_game: freeciv
+source_repo: https://github.com/freeciv/freeciv
+copyright: Copyright © Freeciv contributors
+license_code: GPL-2.0-or-later
+license_assets: GPL-2.0-only
+extracted_license: GPL-2.0 (그림도 GPL)
+extracted_at: '2026-07-15T05:32:53.520627Z'
+filename: darwins_voyage.png
+rel_path: wonders/darwins_voyage.png
+size_bytes: 4976
+category: asset
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

@@ -242,7 +242,7 @@ HTML = (HTML
     .replace("%WESNOTH_COUNT%", f"{EXTRA_STATS['wesnoth_count']:,}")
     .replace("%WESNOTH_CATS%", cats_html)
     .replace("%CAT_OPTIONS%", cat_opts)
-    .replace("%JSON_DATA%", json.dumps(records[:1500], ensure_ascii=False))
+    .replace("%JSON_DATA%", json.dumps(records[:9000], ensure_ascii=False))
 )
 
 (SITE / "index.html").write_text(HTML)

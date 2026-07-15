@@ -1,0 +1,13 @@
+source_game: openttd
+source_repo: https://github.com/OpenTTD/OpenTTD
+copyright: Copyright © OpenTTD contributors / Transport Tycoon original by Chris Sawyer
+license_code: GPL-2.0-only
+license_assets: GPL-2.0-only
+extracted_license: GPL-2.0 (원본 픽셀 저작권 별도 표기)
+extracted_at: '2026-07-15T05:32:49.147036Z'
+filename: openttd.64.png
+rel_path: gui/openttd.64.png
+size_bytes: 6803
+category: ui-element
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)

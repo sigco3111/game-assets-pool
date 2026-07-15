@@ -7,6 +7,13 @@ Thumbs.db
 **/cache/
 extracted/*/raw/
 
+# extracted/ 안 .gitignore (원본 symlink 추적) — git은 추적 시 무한 루프 위험
+extracted/**/*.gitignore
+extracted/**/Makefile.am
+extracted/**/Makefile.in
+extracted/**/*.cmake
+extracted/**/CMakeLists.txt
+
 # 자동 다운로드 자산의 대용량 원본 — SOURCE.md만 트래킹
 # bash tools/fetch-cc0-assets.sh 로 언제든 다시 받을 수 있음
 free/**/*.png

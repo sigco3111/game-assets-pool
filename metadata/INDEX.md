@@ -1,16 +1,16 @@
 # Game Assets Pool — Master Index
 
-**generated**: 2026-07-15T05:21:10.622387Z
-**stats**: 6,178 큐레이션 링크 + 1,088 Wesnoth 에셋
+**generated**: 2026-07-15T05:34:03.852999Z
+**stats**: 11,306 큐레이션 링크 + 1,088 Wesnoth 에셋
 
 
 ## 📊 풀 스냅샷
 
 | 카테고리 | 항목 수 |
 |---|---:|
-| 큐레이션 유니크 링크 | 6,178 |
+| 큐레이션 유니크 링크 | 11,306 |
 | Wesnoth 에셋 (sidecar) | 1,088 |
-| **합계** | **7,266** |
+| **합계** | **12,394** |
 
 ## 🎮 Wesnoth 카테고리별 분포
 
@@ -29,21 +29,21 @@
 | JavaScript | 269 |
 | C++ | 232 |
 | Rendering & Shader Theory | 221 |
+| C# | 209 |
 | Unreal Engine: Resources | 185 |
+| Engines and Frameworks | 158 |
 | 3D Communities & Forums | 154 |
+| C | 150 |
 | Blender: Plugins & Addons | 143 |
+| 2D Engines and Frameworks | 137 |
+| Global illumination (GI) | 132 |
+| 3D Engines and Frameworks | 124 |
+| English | 120 |
+| UI | 111 |
+| Utilities | 103 |
+| 中文 | 100 |
 | Video Editing: Courses | 97 |
-| Pipeline Overview | 92 |
-| C | 90 |
-| Paid Tutorial Platforms | 89 |
-| Game Jams | 80 |
-| Attribution | 79 |
-| Material Creation Tools | 78 |
-| Photogrammetry & 3D Scanning | 73 |
-| Pre-Production, Storyboarding & Script Tools | 68 |
-| Pipeline & Production Management Software | 64 |
-| Game Engines: Free & Open Source | 62 |
-| 2D & Animation Software | 60 |
+| Game Jams | 92 |
 
 ## 🔬 게임 소스별 추출
 

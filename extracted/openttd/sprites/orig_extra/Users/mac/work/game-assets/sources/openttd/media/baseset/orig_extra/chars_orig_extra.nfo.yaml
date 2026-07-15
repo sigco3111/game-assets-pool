@@ -1,0 +1,13 @@
+source_game: openttd
+source_repo: https://github.com/OpenTTD/OpenTTD
+copyright: Copyright © OpenTTD contributors / Transport Tycoon original by Chris Sawyer
+license_code: GPL-2.0-only
+license_assets: GPL-2.0-only
+extracted_license: GPL-2.0 (원본 픽셀 저작권 별도 표기)
+extracted_at: '2026-07-15T05:32:49.171978Z'
+filename: chars_orig_extra.nfo
+rel_path: sprites/orig_extra/Users/mac/work/game-assets/sources/openttd/media/baseset/orig_extra/chars_orig_extra.nfo
+size_bytes: 12649
+category: asset
+attribution_required: true
+modifications: none (symlinked from upstream sparse-checkout)
